@@ -24,8 +24,12 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" >Folder Path</TextBlock>
             <TextBox Name="txtFolderPath" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">D:\GPCSupport\ExtractTest</TextBox>
-        <Button Name ="btnExtractData" Grid.Row="1" Grid.Column="0" Width="100" HorizontalAlignment="Left" Click="btnExtractData_Click">Extract</Button>
-        <TextBox Name="txtLog"
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" >
+                <Button Name ="btnExtractData"  Width="100" Margin="3,3,3,3" HorizontalAlignment="Left" Click="btnExtractData_Click">Extract</Button>
+
+                <Button Name="btnClear" Width="100" Margin="20,3,3,3" Click="btnClear_Click" > Clear</Button>
+            </StackPanel>
+            <TextBox Name="txtLog"
                   AcceptsReturn="True"
                   VerticalScrollBarVisibility="Auto"
                   Height="400"

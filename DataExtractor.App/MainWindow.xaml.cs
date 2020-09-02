@@ -67,5 +67,10 @@ namespace DataExtractor.App
                 }
             });
         }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtLog.Clear();
+        }
     }
 }
