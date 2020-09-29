@@ -1,0 +1,41 @@
+﻿<Window x:Class="DataExtractor.Framework.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataExtractor.Framework.App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid  Margin="0 20 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" >Folder Path</TextBlock>
+            <TextBox Name="txtFolderPath" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">D:\GPCSupport\ExtractTest</TextBox>
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" >
+                <Button Name ="btnExtractData"  Width="100" Margin="3,3,3,3" HorizontalAlignment="Left" Click="btnExtractData_Click">Extract</Button>
+
+                <Button Name="btnClear" Width="100" Margin="20,3,3,3" Click="btnClear_Click" >Clear</Button>
+            </StackPanel>
+            <TextBox Name="txtLog"
+                  AcceptsReturn="True"
+                  VerticalScrollBarVisibility="Auto"
+                  Height="400"
+                  Grid.Row="2"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="3" TextWrapping="Wrap" MaxLength="20000"></TextBox>
+        </Grid>
+    </Grid>
+</Window>
